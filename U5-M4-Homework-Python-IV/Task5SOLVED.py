@@ -8,12 +8,14 @@ I researched built in methods and found min() & max()
     - set max profit using max() on max profit vs price - min price
 -return max profit 
 """
-import math
-import builtins
-print(help(min))
-print(help(max))
+# import math
+# import builtins
+# print(help(min))
+# print(help(max))
 def buyAndSellStock(prices):
-    max_profit, min_price = 0, float("inf")
+    # max_profit, min_price = 0, float("inf")
+    max_profit = 0 
+    min_price = float("inf")
     for price in prices: 
         min_price = min(price, min_price)
         max_profit = max(max_profit, price - min_price)
