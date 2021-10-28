@@ -10,6 +10,12 @@ def validParenthesesSequence(s):
             if current_char == '(':
                 if char != ")":
                     return False
+            if current_char == '{':
+                if char != "}":
+                    return False
+            if current_char == '[':
+                if char != "]":
+                    return False
     if stackOfParenth:
         return False
     return True
