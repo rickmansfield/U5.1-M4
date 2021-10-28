@@ -12,7 +12,6 @@
 -return new_word
 
 """
-# alphaDict = {1:"a", 2:"b", 3:"c", }
 def alphabeticShift(inputString):
     index = 0
     new_word = ""

@@ -33,36 +33,36 @@ if we get here prepend a 1 to the front of our number
 
 """
 from time import time
+
+
 def plus_one(digits):
-  for i in range(len(digits) - 1, -1, -1):
-    if digits[i] == 9:
-      digits[i] = 0
-    else:
-      digits[i] += 1
-      return digits
-  
-  # digits.insert(0, 1)
-  return [1] + digits
+    for i in range(len(digits) - 1, -1, -1):
+        if digits[i] == 9:
+            digits[i] = 0
+        else:
+            digits[i] += 1
+            return digits
 
-
+    # digits.insert(0, 1)
+    return [1] + digits
 
 
 # Tests
 start = time()
-print(plus_one([1,3,2])) # [1,3,3]
+print(plus_one([1, 3, 2]))  # [1,3,3]
 end = time()
 print("runtime =", end - start)
 start = time()
-print(plus_one([3,2,1,9])) # [3,2,2,0]
+print(plus_one([3, 2, 1, 9]))  # [3,2,2,0]
 end = time()
 print("runtime =", end - start)
 start = time()
-print(plus_one([9,9,9])) # [1,0,0,0]
+print(plus_one([9, 9, 9]))  # [1,0,0,0]
 end = time()
 print("runtime =", end - start)
 start = time()
 d = [9, 9, 9]
-print(plus_one(d)) # [1,0,0,0]
+print(plus_one(d))  # [1,0,0,0]
 end = time()
 print("runtime =", end - start)
 print(d)
